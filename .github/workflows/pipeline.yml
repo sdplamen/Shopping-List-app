@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Build and Test Shopping app
 
 on:
   push:
@@ -12,17 +12,15 @@ jobs:
     steps:
     - name: Checkout the repository
       uses: actions/checkout@v4
-    - name: Use Node.js 20.x}
+    - name: Use Node.js 20.x
       uses: actions/setup-node@v4
       with:
-        node-version: 20.x}
+        node-version: 20.x
         cache: 'npm'
     - name: install npm dependencies
       run: npm install
     - name: Run Unit tests
       run: npm run test:unit
-    - name: Run UI tests
-      run: npm run test:ui
     - name: Display softuni username
       run: echo "sdplamen"
   run-ui-tests:
@@ -31,19 +29,17 @@ jobs:
     steps:
     - name: Install NPM dependen
       uses: actions/checkout@v4
-    - name: Use Node.js 20.x}
+    - name: Use Node.js 20.x
       uses: actions/setup-node@v4
       with:
-        node-version: 20.x}
+        node-version: 20.x
         cache: 'npm'
-    - name: Install npm dependencies
+    - name: Install NPM dependencies
       run: npm install
-    - name: Install playwirght Browsers
+    - name: Install Playwirght Browsers
       run: npm playwright install
     - name: Start the Aplication
       run: npm start &
-    - name: Run Unit tests
-      run: npm run test:unit
     - name: Run UI tests
       run: npm run test:ui
     - name: Display softuni username
