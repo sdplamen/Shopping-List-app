@@ -37,7 +37,7 @@ jobs:
     - name: Install NPM dependencies
       run: npm install
     - name: Install Playwirght Browsers
-      run: npm playwright install
+      run: npx playwright install
     - name: Start the Aplication
       run: npm start &
     - name: Run UI tests
