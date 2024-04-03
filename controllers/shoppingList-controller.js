@@ -1,8 +1,8 @@
 function setup(app, shoppingList) {
   app.get('/', function(req, res) {
     let model = {
-      title: "My Shopping List",
-      msg: "My Shopping List",
+      title: "My shopping list",
+      msg: "My shopping list",
       shoppingList: shoppingList
     };
     res.render('home', model);
@@ -13,12 +13,12 @@ function setup(app, shoppingList) {
   });
 
   app.get('/shopping-list', function(req, res) {
-    let model = { title: "Shopping List", shoppingList };
+    let model = { title: "Shopping list", shoppingList };
     res.render('shopping-list', model);
   });
 
   app.get('/about', function(req, res) {
-    let model = { title: "About" };
+    let model = { title: "About my home page" };
     res.render('about', model);
   });
 
