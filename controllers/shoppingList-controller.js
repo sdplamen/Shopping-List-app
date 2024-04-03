@@ -18,7 +18,7 @@ function setup(app, shoppingList) {
   });
 
   app.get('/about', function(req, res) {
-    let model = { title: "About my home page" };
+    let model = { title: "About my shopping list" };
     res.render('about', model);
   });
 
