@@ -27,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build_CI
     steps:
-    - name: Install NPM dependen
+    - name: Checkout the repository
       uses: actions/checkout@v4
     - name: Use Node.js 20.x
       uses: actions/setup-node@v4
